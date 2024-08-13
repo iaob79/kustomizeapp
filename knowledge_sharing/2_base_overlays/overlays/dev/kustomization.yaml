@@ -1,0 +1,12 @@
+resources:
+- ../../base
+
+namespace: dev2
+
+patchesStrategicMerge:
+  - replicas.yaml
+
+# สร้าง configMap
+configMapGenerator:
+- name: mywebapp-configmap
+  env: config.properties
