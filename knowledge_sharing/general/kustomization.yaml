@@ -1,0 +1,12 @@
+resources:
+- deployment.yaml
+- service.yaml
+
+# # ใช้ commonLabels เพื่อ manage label และ selector ใน resources
+# commonLabels:
+#   app: kus-mywebapp
+
+
+# # ใช้ commonAnnotations เพื่อ manage annotation ใน resources
+# commonAnnotations:
+#   app: kus-annotations
