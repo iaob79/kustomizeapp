@@ -10,3 +10,15 @@ resources:
 # # ใช้ commonAnnotations เพื่อ manage annotation ใน resources
 # commonAnnotations:
 #   app: kus-annotations
+
+# # namePrefix และ nameSuffix เพื่อ manage prefix และ suffix ของ name
+# namePrefix:
+#   my-
+
+# nameSuffix:
+#   -v1
+
+# # สร้าง configMap
+# configMapGenerator:
+# - name: mywebapp-configmap
+#   env: config.properties
