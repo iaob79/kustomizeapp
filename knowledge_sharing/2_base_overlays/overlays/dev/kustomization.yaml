@@ -3,10 +3,13 @@ resources:
 
 namespace: dev2
 
-patchesStrategicMerge:
-  - replicas.yaml
 
 # สร้าง configMap
 configMapGenerator:
-- name: mywebapp-configmap
-  env: config.properties
+- envs:
+  - config.properties
+  name: mywebapp-configmap
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patches:
+- path: replicas.yaml
