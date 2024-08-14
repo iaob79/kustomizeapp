@@ -1,7 +1,7 @@
 resources:
 - ../../base
 
-namespace: dev2
+namespace: devtest
 
 
 # สร้าง configMap

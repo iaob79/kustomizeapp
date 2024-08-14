@@ -2,23 +2,23 @@ resources:
 - deployment.yaml
 - service.yaml
 
-# # ใช้ commonLabels เพื่อ manage label และ selector ใน resources
-# commonLabels:
-#   app: kus-mywebapp
+# ใช้ commonLabels เพื่อ manage label และ selector ใน resources
+commonLabels:
+  app: kus-mywebapp
 
 
-# # ใช้ commonAnnotations เพื่อ manage annotation ใน resources
-# commonAnnotations:
-#   app: kus-annotations
+# ใช้ commonAnnotations เพื่อ manage annotation ใน resources
+commonAnnotations:
+  app: kus-annotations
 
-# # namePrefix และ nameSuffix เพื่อ manage prefix และ suffix ของ name
-# namePrefix:
-#   my-
+# namePrefix และ nameSuffix เพื่อ manage prefix และ suffix ของ name
+namePrefix:
+  my-
 
-# nameSuffix:
-#   -v1
+nameSuffix:
+  -v1
 
-# # สร้าง configMap
-# configMapGenerator:
-# - name: mywebapp-configmap
-#   env: config.properties
+# สร้าง configMap
+configMapGenerator:
+- name: mywebapp-configmap
+  env: config.properties
